@@ -1,0 +1,253 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.background-img{
+  position: relative;
+  height: 100vh;
+}
+
+.header-top {
+  background: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  color: #fff;
+}
+
+.buy-now button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #82b440;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.buy-now button:hover {
+  background-color: #6e9938;
+}
+
+.box-1{
+  position: absolute;
+  top: 8%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  padding: 20px 50px;
+  color: white;
+  gap: 20px;
+}
+
+.nav-bar {
+  position: absolute;
+  top: 16%;
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 15px 20px;
+  color: white;
+}
+
+
+nav {
+  position: relative;
+  z-index: 3; 
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #ff6600; 
+    border-bottom: 2px solid #ff6600; 
+}
+
+.search button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.search i {
+  font-size: 24px;
+  color: #e47e03;
+}
+
+
+.image-content{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  top: 50%;
+  color: white;
+  padding: 90px;
+  font-size: 30px;
+}
+
+
+.form-container {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.form-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ff5722;
+}
+
+.contact-form .form-group {
+  margin-bottom: 15px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+/* Two-Column Layout for Phone and Email */
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-column {
+  flex: 1;
+}
+
+.contact-form .submit-btn {
+  display: block;
+  width: 100%;
+  background-color: #ff5722;
+  color: white;
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form .submit-btn:hover {
+  background-color: #e64a19;
+}
+
+
+.brand-section {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px 10%;
+}
+
+.brand-section img {
+  width: 120px;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+
+.four-div-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 Equal Columns */
+  gap: 20px;
+  padding: 40px 10%;
+  background-color: #000;
+  color: white;
+}
+
+.four-div-section > div {
+  /* background: #fff; */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.footer-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 20%;
+  background-color: #ff8a00;
+  color: #fff;
+}
+
+
+.footer-left{
+  color: #000;
+}
+
+.footer-left p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.footer-right {
+  display: flex;
+  gap: 20px;
+}
+
+.social-icon {
+  color: #fff;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
