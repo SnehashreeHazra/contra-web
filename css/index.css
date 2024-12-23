@@ -1,0 +1,371 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.header-top {
+  background: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  color: #fff;
+}
+
+.logo1 span{
+  font-weight: 100;
+}
+
+.logo img {
+  /* width: 100px;  */
+}
+
+.buy-now button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #82b440;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.buy-now button:hover {
+  background-color: #6e9938;
+}
+
+.header-bottom {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 15px 20px;
+  clip-path: polygon(0% 0%, 100% 0%, 95% 100%, 5% 100%);
+  color: white;
+}
+
+
+
+.logo2 img {
+  height: 70px; 
+}
+
+nav {
+  position: relative;
+  z-index: 3; 
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #ff6600; 
+    border-bottom: 2px solid #ff6600; 
+}
+
+.search button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.search i {
+  font-size: 24px;
+  color: #e47e03;
+}
+
+
+
+/* Hero Section */
+.hero-section {
+  height: 100vh; /* Full viewport height */
+  background: url('../images/image-1.jpg') no-repeat center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  color: white;
+  
+}
+
+.hero-content {
+  margin-top: 400px;
+  max-width: 50%; 
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.hero-section button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero-section button:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+
+/* Scrolling-section */
+
+.scrolling-section {
+  background-color: #333; /* Dark background */
+  color: white; /* Light text */
+  display: flex; /* Flexbox layout */
+  justify-content: space-between; /* Space between left and right sections */
+  align-items: center; /* Center vertically */
+  padding: 50px 100px; /* Add some padding */
+}
+
+
+.left-section{
+  display: flex;
+  gap: 15px;
+}
+/* Left Side (Phone & Email) */
+.left-section p {
+  margin: 0; /* Remove default margin */
+  font-size: 1rem; /* Set font size */
+}
+
+/* Right Side (Buttons) */
+.right-section {
+  display: flex; /* Flexbox for buttons */
+  gap: 10px; /* Space between buttons */
+}
+
+
+/* Common Button Style */
+.right-section button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 30px; 
+  font-size: 1rem; 
+  font-weight: bold;
+  color: white; 
+  background-color: transparent; 
+  border: none; 
+  cursor: pointer; 
+  text-transform: uppercase; 
+  overflow: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.right-section button::before,
+.right-section button::after {
+  content: '';
+  position: absolute;
+  height: 2px; /* Thickness of the border */
+  width: 100%;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+/* Top Border */
+.right-section button::before {
+  top: 0; /* Position at the top */
+  width: 100%; /* Full width by default */
+  left: 0;
+}
+
+/* Bottom Border */
+.right-section button::after {
+  bottom: 0; /* Position at the bottom */
+  width: 100%; /* Full width by default */
+  left: 0;
+}
+
+.prev-btn::before {
+  width: calc(100% - 30px); /* Shorten the top border from the right */
+}
+
+.prev-btn::after {
+  width: calc(100% - 30px); /* Shorten the bottom border from the right */
+}
+
+.prev-btn {
+  text-align: left; /* Align text to the left */
+}
+
+.next-btn::before {
+  width: calc(100% - 30px); /* Shorten the top border from the left */
+  left: 30px; /* Start after the letter T */
+}
+
+.next-btn::after {
+  width: calc(100% - 30px); /* Shorten the bottom border from the left */
+  left: 30px; /* Start after the letter T */
+}
+
+
+.right-section .prev-btn::before {
+  content: "\2190"; 
+  position: absolute;
+  left: 10px; 
+  font-size: 1.2rem;
+}
+
+
+.right-section .next-btn::after {
+  content: "\2192"; 
+  position: absolute;
+  right: 10px; 
+  font-size: 1.2rem;
+}
+
+
+.image-card-section {
+  position: relative;
+  width: 100%;
+  margin-top: 50px;
+}
+
+/* Big Background Image */
+.background-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Smaller Overlay Image */
+.overlay-image {
+  position: absolute;
+  top: 50%; /* Adjust based on where you want the smaller image */
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.overlay-image img {
+  width: 300px; /* Adjust the size of the smaller image */
+  border-radius: 10px; /* Optional rounded corners */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Shadow for emphasis */
+}
+
+/* Card Styling */
+.card {
+  position: relative;
+  width: 60%;
+  background-color: white;
+  margin: 0 auto;
+  margin-top: 100px; /* Space between images and card */
+  display: flex;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  overflow: visible; /* Allows the image to overlap */
+}
+
+/* Card Image (Left) */
+.card-image {
+  position: relative;
+  width: 40%; /* Adjust image width */
+  overflow: visible;
+}
+
+.card-image img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: -30%; /* Moves the image upwards to overlap */
+  left: 0;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Shadow for the image */
+}
+
+/* Card Text (Right) */
+.card-text {
+  width: 60%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-text h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.card-text p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.card-text button {
+  align-self: start;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card-text button:hover {
+  background-color: #555;
+}
+
+
+
+
+
