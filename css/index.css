@@ -22,6 +22,7 @@ body {
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
+
 header {
   position: fixed;
   top: 0;
@@ -29,36 +30,6 @@ header {
   z-index: 10;
 }
 
-.header-top {
-  background: #333;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  color: #fff;
-}
-
-.logo1 span{
-  font-weight: 100;
-}
-
-.logo img {
-  /* width: 100px;  */
-}
-
-.buy-now button {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #82b440;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.buy-now button:hover {
-  background-color: #6e9938;
-}
 
 .header-bottom {
   position: sticky;
@@ -193,7 +164,7 @@ nav ul li a.active {
     transition: all 1000ms ease;
 }
 .text_para{
-      position: relative;
+    position: relative;
     display: block;
     font-size: 24px;
     line-height: 1.2em;
