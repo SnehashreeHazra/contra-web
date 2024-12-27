@@ -1,4 +1,4 @@
-const navBar = document.querySelector('.nav-bar');
+const navBar = document.querySelector('.navbar');
 
 // Listen to scroll event
 window.addEventListener('scroll', () => {

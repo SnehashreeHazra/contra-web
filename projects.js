@@ -1,5 +1,15 @@
+const navBar = document.querySelector('.navbar-section');
 
-
+// Listen to scroll event
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) { 
+    // When scrolled down, move navbar to the top
+    navBar.style.top = '0';
+  } else {
+    // Restore the initial position
+    navBar.style.top = '7.9%';
+  }
+});
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -11,13 +21,13 @@ document.addEventListener("DOMContentLoaded", () => {
       // Remove 'active' class from all filters
       filters.forEach((btn) => btn.classList.remove("active"));
 
-      // Add 'active' class to the clicked filter
+      
       filter.classList.add("active");
 
-      // Get the filter type from the clicked filter's data attribute
+      
       const filterType = filter.getAttribute("data-filter");
 
-      // Show/hide grid containers based on the selected filter
+      
       gridContainers.forEach((container) => {
         if (filterType === "all") {
           // Show all containers
