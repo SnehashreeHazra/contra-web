@@ -14,32 +14,48 @@ window.addEventListener('scroll', () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const filters = document.querySelectorAll(".filter");
-  const gridContainers = document.querySelectorAll(".grid-container, .grid-container1, .grid-container2, .grid-container3");
+  const allContainer = document.querySelector(".grid-container.all");
+  const otherContainers = document.querySelectorAll(
+    ".grid-container1, .grid-container2, .grid-container3, .grid-container.landscape"
+  );
 
   filters.forEach((filter) => {
     filter.addEventListener("click", () => {
       // Remove 'active' class from all filters
       filters.forEach((btn) => btn.classList.remove("active"));
 
-      
+      // Add 'active' class to the clicked filter
       filter.classList.add("active");
 
-      
+      // Get the filter type from the data attribute
       const filterType = filter.getAttribute("data-filter");
 
-      
-      gridContainers.forEach((container) => {
-        if (filterType === "all") {
-          // Show all containers
-          container.classList.add("active");
-        } else if (container.classList.contains(filterType)) {
-          // Show only matching containers
-          container.classList.add("active");
-        } else {
-          // Hide non-matching containers
-          container.classList.remove("active");
-        }
-      });
+      if (filterType === "all") {
+        // Show only the 'all' layout
+        allContainer.classList.add("active");
+        otherContainers.forEach((container) => container.classList.remove("active"));
+      } else if (filterType === "landscape") {
+        // Show only the 'landscape' layout
+        otherContainers.forEach((container) => {
+          if (container.classList.contains(filterType)) {
+            container.classList.add("active");
+          } else {
+            container.classList.remove("active");
+          }
+        });
+        allContainer.classList.remove("active");
+      } else {
+        // Show the layout matching the filter and hide others
+        otherContainers.forEach((container) => {
+          if (container.classList.contains(filterType)) {
+            container.classList.add("active");
+          } else {
+            container.classList.remove("active");
+          }
+        });
+        allContainer.classList.remove("active");
+      }
     });
   });
 });
+

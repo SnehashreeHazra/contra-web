@@ -41,7 +41,7 @@
   margin: 0 auto;
 }
 
-.navbar{
+.contact-navbar{
   position: fixed;
   top: 7.9%;
   z-index: 10;
@@ -56,30 +56,30 @@
 }
 
 
-.logo{
+.contact-navbar .logo{
   padding-right: 100px;
 }
 
 
-.logo img{
+.contact-navbar .logo img{
   height: 75px;
 }
 
-nav{
+.contact-nav{
   position: relative;
   z-index: 3;
 }
-nav ul {
+.contact-nav .contact-ul {
   display: flex;
   list-style-type: none;
   column-gap: 15px;
 }
 
-nav ul li {
+.contact-nav .contact-ul li {
   margin: 0 17px;
 }
  
-nav ul li a {
+.contact-nav .contact-ul li a {
   text-decoration: none;
   color: #fff;
   font-size: 14px;
@@ -88,8 +88,8 @@ nav ul li a {
   transition: color 0.3s ease;
 }
 
-nav ul li a:hover,
-nav ul li a.active {
+.contact-nav .contact-ul li a:hover,
+.contact-nav .contact-ul li a.active {
     color: #ff6600; 
   
 }
@@ -97,11 +97,11 @@ nav ul li a.active {
 .nav_phone_para5{
   font-size: 14px;
 }
-.search-div{
+.contact-search-div{
   padding-left: 50px;
 }
 
-.search-div div{
+.contact-search-div div{
   width: 100%;
   max-width: 32px;
   min-width: 32px;
@@ -113,15 +113,15 @@ nav ul li a.active {
   align-items: center;
 }
 
-.search-div i {
+.contact-search-div i {
   font-size: 15px;
   color: #e47e03;
 }
 
-.page-title-section{
+.contact-page-title-section{
   position: relative;
   height: 100vh;
-  background: url('../images/contact-image.jpg') no-repeat center/cover;
+  background: url('../images/IMG_3789.jpg') no-repeat center/cover;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -130,7 +130,7 @@ nav ul li a.active {
   color: white;
 }
 
-.page-title-section::before{
+.contact-page-title-section::before{
     content: '';
     left: 0;
     top: 0;
@@ -141,7 +141,7 @@ nav ul li a.active {
     position: absolute;
 }
 
-.page_title_section_div_wrapper{
+.contact-page_title_section_div_wrapper{
   width: 100%;
   max-width: 80%;
   min-width: 80%;
@@ -211,7 +211,7 @@ nav ul li a.active {
 
 .auto-container{
   position: static;
-  max-width: 1300px;
+  max-width: 1200px;
   padding: 0px 15px;
   margin: 0 auto;
 }
@@ -471,7 +471,7 @@ nav ul li a.active {
 }
 
 .first-div img {
-  width: 50%;
+  width: 25%;
 }
 
 .second-div {
@@ -611,6 +611,10 @@ nav ul li a.active {
 }
 
 .small-images-container img {
+  width: 100%;
+  max-width: 80px;
+  min-width: 80px;
+  height: 70px;
   margin-left: 10px;
   margin-top: 10px;
 }

@@ -60,21 +60,21 @@
   height: 75px;
 }
 
-nav{
+.menu{
   position: relative;
   z-index: 3;
 }
-nav ul {
+.menu .menu-ul {
   display: flex;
   list-style-type: none;
   column-gap: 15px;
 }
 
-nav ul li {
+.menu .menu-ul li {
   margin: 0 17px;
 }
  
-nav ul li a {
+.menu .menu-ul li a {
   text-decoration: none;
   color: #fff;
   font-size: 14px;
@@ -83,8 +83,8 @@ nav ul li a {
   transition: color 0.3s ease;
 }
 
-nav ul li a:hover,
-nav ul li a.active {
+.menu .menu-ul li a:hover,
+.menu .menu-ul li a.active {
     color: #ff6600; 
 }
 .nav_phone_para5{
@@ -114,7 +114,7 @@ nav ul li a.active {
 .page-title-section{
   position: relative;
   height: 100vh;
-  background: url('../images/contact-image.jpg') no-repeat center/cover;
+  background: url('../images/IMG_3789.jpg') no-repeat center/cover;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -183,7 +183,7 @@ nav ul li a.active {
     transition: all 1000ms ease;
 }
 
-.text_para{
+.text_paragraph{
   position: relative;
   display: block;
   font-size: 27px;
@@ -206,10 +206,9 @@ nav ul li a.active {
 
 .auto-container{
   position: static;
-  /* max-width: 1200px; */
   width: 100%;
-  max-width: 83%;
-  min-width: 83%;
+  max-width: 85%;
+  min-width: 85%;
   margin-inline: auto;
   padding: 0px 15px;
   margin: 0 auto;
@@ -314,21 +313,21 @@ nav ul li a.active {
 
 .grid-container .flex1{
   display: grid;
-  grid-template-columns: 370px 770px;
+  grid-template-columns: 400px 840px;
   grid-template-rows: 550px;
   grid-column-gap: 30px;
 }
 
 .grid-container .flex2{
   display: grid;
-  grid-template-columns: 570px 570px;
+  grid-template-columns: 620px 620px;
   grid-template-rows: 550px;
   grid-column-gap: 30px;
 }
 
 .grid-container .flex3{
   display: grid;
-  grid-template-columns: 370px 370px 370px;
+  grid-template-columns: 400px 400px 400px;
   /* grid-template-rows: 550px; */
   grid-column-gap: 30px;
 }
@@ -671,7 +670,7 @@ figure {
 }
 
 .first-div img {
-  width: 50%;
+  width: 25%;
 }
 
 .second-div {
@@ -811,6 +810,10 @@ figure {
 }
 
 .small-images-container img {
+  width: 100%;
+  max-width: 80px;
+  min-width: 80px;
+  height: 70px;
   margin-left: 10px;
   margin-top: 10px;
 }
