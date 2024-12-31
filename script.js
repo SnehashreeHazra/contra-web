@@ -26,12 +26,13 @@ sliderTabs.forEach((tab) => {
 //   autoplay: {delay: 2000}
 // })
 
-const swiper2 = new Swiper(".swiper-container", {
-  effect: "slide",
-  loop: true,
-  slidesPerView: 5,
-  autoplay: {delay: 4000}
-})
+// const swiper2 = new Swiper(".swiper-container", {
+//   effect: "slide",
+//   loop: true,
+//   slidesPerView: 5,
+//   autoplay: {delay: 4000}
+// });
+
 
 // const swiper3 = new Swiper(".brand-swiper", {
 //   effect: "slide",
@@ -39,6 +40,54 @@ const swiper2 = new Swiper(".swiper-container", {
 //   slidesPerView: 5,
 //   autoplay: {delay: 4000}
 // })
+
+
+const swiper4 = new Swiper(".swiper-container2", {
+  effect: "slide",
+  slidesPerView: 3,
+  
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  
+})
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const filters = document.querySelectorAll(".filter1");
+  const residentialSlider = document.querySelector(".slider_1");
+  const commercialSlider = document.querySelector(".slider_2");
+
+  filters.forEach((filter) => {
+    filter.addEventListener("click", () => {
+      // Remove 'active' class from all filters
+      filters.forEach((btn) => btn.classList.remove("active"));
+
+      // Add 'active' class to the clicked filter
+      filter.classList.add("active");
+
+      // Get the filter type from the data attribute
+      const filterType = filter.getAttribute("data-filter");
+
+      // Toggle sliders based on the filter type
+      if (filterType === "residential") {
+        residentialSlider.classList.add("active");
+        commercialSlider.classList.remove("active");
+      } else if (filterType === "commercial") {
+        commercialSlider.classList.add("active");
+        residentialSlider.classList.remove("active");
+      }
+    });
+  });
+});
+
 
 
 

@@ -72,32 +72,74 @@
               </div>
               <div class="contact-form">
                 <form id="contact-form">
-                    <div class="flex1-box">
-                      <div class="form-group">
-                        <input type="text" name="username" placeholder="Name" required>
-                      </div>
-                      <div class="form-group">
-                        <input type="text" name="phone" placeholder="Phone" required>
-                      </div>
-                    </div>
-                    <div class="flex2-box">
-                      <div class="form-group">
-                        <input type="text" name="company" placeholder="Company" required>
-                      </div>
-                      <div class="form-group">
-                        <input type="email" name="email" placeholder="Email" required>
-                      </div>
-                    </div>
-                    
-                    <div class="form-group1">
-                      <textarea name="address" placeholder="Address"></textarea>
+                  <!-- Name and Category in one row -->
+                  <div class="form-group-row">
+                    <div class="form-group">
+                      <input type="text" name="username" placeholder="Name" required>
                     </div>
                     <div class="form-group">
-                      <button class="theme-btn btn-style-three" type="submit" name="submit-form">Submit</button>
+                      <select name="category" required>
+                        <option value="" disabled selected>Select Category</option>
+                        <option value="residential">Residential</option>
+                        <option value="commercial">Commercial</option>
+                      </select>
                     </div>
-                  
+                  </div>
+              
+                  <!-- Requirements and Square Feet in one row -->
+                  <div class="form-group-row">
+                    <div class="form-group">
+                      <select name="requirements" required>
+                        <option value="" disabled selected>Select Requirements</option>
+                        <option value="full-interior">Full Interior</option>
+                        <option value="partial-interior">Partial Interior</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <input type="number" name="squareFeet" placeholder="Square Feet" required>
+                    </div>
+                  </div>
+              
+                  <!-- Location and Phone in one row -->
+                  <div class="form-group-row">
+                    <div class="form-group">
+                      <input type="text" name="location" placeholder="Location" required>
+                    </div>
+                    <div class="form-group">
+                      <input type="tel" name="phone" placeholder="Phone Number" required>
+                      <button type="button" id="send-otp" class="otp-btn">Send OTP</button>
+                    </div>
+                  </div>
+              
+                  <!-- OTP and Email in one row -->
+                  <div class="form-group-row">
+                    <div class="form-group">
+                      <input type="text" name="otp" placeholder="Enter OTP" required>
+                    </div>
+                    <div class="form-group">
+                      <input type="email" name="email" placeholder="Email" required>
+                      <button type="button" id="verify-email" class="otp-btn">Verify Email</button>
+                    </div>
+                  </div>
+              
+                  <!-- Project Name (Optional) -->
+                  <div class="form-group">
+                    <input type="text" name="projectName" placeholder="Project Name (Optional)">
+                  </div>
+              
+                  <!-- Address (Optional) -->
+                  <div class="form-group1">
+                    <textarea name="address" placeholder="Address (Optional)"></textarea>
+                  </div>
+              
+                  <!-- Submit Button -->
+                  <div class="form-group">
+                    <button class="theme-btn btn-style-three" type="submit" name="submit-form">Submit</button>
+                  </div>
                 </form>
               </div>
+              
+              
               <div class="contact-info">
                 <div class="row">
                   <div class="info-block">
@@ -130,13 +172,7 @@
 
 
 
-          <div class="map-column">
-            <div class="inner-column">
-              <div class="map-outer">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3687.1572719362107!2d88.3906624!3d22.460723500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a027194c2f7a529%3A0x7f41ef8ff7c7a718!2sI%20Create!5e0!3m2!1sen!2sin!4v1735285729480!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-              </div>
-            </div>
-          </div>
+          
         </div>
       </div>
   </section>
